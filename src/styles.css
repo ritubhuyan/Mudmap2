@@ -1,0 +1,79 @@
+.mudmap-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+
+.tile {
+  background-color: #e0e0e0;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tile:hover {
+  background-color: #d0d0d0;
+}
+
+.tile.selected {
+  border-color: #0066ff;
+  background-color: #b3d1ff;
+}
+
+.tile.grouped {
+  background-color: #cce7ff;
+  z-index: 1;
+}
+
+.group-label {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.tile-id {
+  font-size: 14px;
+}
+
+.instructions {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
